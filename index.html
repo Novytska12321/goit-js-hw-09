@@ -11,24 +11,10 @@
     <link rel="stylesheet" href="/goit-js-hw-09/assets/index-928275c0.css">
   </head>
   <body>
-    <div id="gallery"></div>
-    <div id="form"></div>
-    
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        fetch('./1-gallery.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('gallery').innerHTML = data;
-          });
-
-        fetch('./2-form.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('form').innerHTML = data;
-          });
-      });
-    </script>
+    <ul>
+      <li><a href="./1-gallery.html">1-gallery</a></li>
+      <li><a href="./2-form.html">2-form</a></li>
+    </ul>
 
 
     
