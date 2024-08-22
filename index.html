@@ -6,23 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     
+    
     <script type="module" crossorigin src="/goit-js-hw-09/assets/modulepreload-polyfill-3cfb730f.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-09/assets/styles-9d15d25a.css">
+    <link rel="stylesheet" href="/goit-js-hw-09/assets/index-928275c0.css">
   </head>
   <body>
-    <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./1-gallery.html" class="nav-link">gallery</a>
-      </li>
+    <div id="gallery"></div>
+    <div id="form"></div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        fetch('./1-gallery.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('gallery').innerHTML = data;
+          });
 
-      <li class="nav-item">
-        <a href="./2-form.html" class="nav-link">form</a>
-      </li>
-    </ul>
-  </nav>
-</header>
+        fetch('./2-form.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('form').innerHTML = data;
+          });
+      });
+    </script>
 
 
     
